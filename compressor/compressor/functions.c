@@ -209,7 +209,7 @@ stack* check_stack(stack* head, char* word, int size_of_word) {
 
 void check_words(stack** head, words** array, int* size, char* word, int counter) {
     stack* check = NULL;
-    long long size_of_word = strlen(word);
+    unsigned long size_of_word = strlen(word);
 
     if (size_of_word < 2) {
         return;
@@ -344,7 +344,7 @@ void insert_from_glossary(char** str, char* word, char* new_word, int* index) {
     if (new_word == NULL) {
         return;
     }
-    int difference = strlen(word) - strlen(new_word), count = 0, start = (*index), second_start = 0;
+    unsigned long difference = strlen(word) - strlen(new_word), count = 0, start = (*index), second_start = 0;
     if (difference > 0) {
         while (count != strlen(new_word)) {
             (*str)[start] = new_word[count];
